@@ -1,8 +1,27 @@
-#!/usr/bin/env python
-# coding: utf-8
+# Data
+import pandas as pd
+import numpy as np
+import warnings
+import os
+import datetime
+import random
 
-# In[ ]:
+# Machine Learning
+from sklearn import metrics
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+from sklearn.model_selection import cross_val_score, KFold, train_test_split
+from sklearn.utils.class_weight import compute_class_weight
 
+# Deep Learning
+import tensorflow as tf
+import kerastuner as kt
+from tensorflow import keras
+from tensorflow.keras.layers import Embedding, Flatten, Concatenate, Dense, Input
+from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+from tensorflow.keras.callbacks import TensorBoard
+from kerastuner.tuners import RandomSearch
 
 # Re-encode 'position_numeric' to have continuous values starting from 0 as we filtered the main_df for defensive players
 model_df['position_numeric'], _ = pd.factorize(model_df['position_numeric'])
@@ -210,5 +229,5 @@ print("Test Loss:", test_loss)
 print("Test Accuracy:", test_accuracy)
 
 # Make predictions based on the optimal performance
-#y_pred = best_model.predict([positions_test, formations_test, numerical_features_test])
+# y_pred = best_model.predict([positions_test, formations_test, numerical_features_test])
 
