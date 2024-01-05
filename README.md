@@ -29,6 +29,7 @@ wt = d \leq \theta
 $$
 
 Where:
+
 $$
 \theta = \text{threshold},
 $$
@@ -56,6 +57,7 @@ Due to the scale of this operation, transforming all of weeks (1 – 9) by loopi
   
 #### Tackle Opportunity Window Ratio
 The TOW score is a valuable metric for comparing players within an individual play. However, its effectiveness diminishes when assessing performances across multiple tackles over a nine-week period. This is because longer plays naturally lead to higher TOW scores, regardless of the actual time a tackler spends near the ball carrier. To address this, introducing a ratio-based system would offer a more accurate and fair representation of each player's performance in every distinct play.
+
 $$
 \text{TOW Ratio} = {\text{TOW Score} \over \text{Total Frames Per Play}} 
 $$
